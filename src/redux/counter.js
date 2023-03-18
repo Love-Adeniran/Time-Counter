@@ -7,7 +7,7 @@ const counterSlice = createSlice({
         number2: 34
     },
     reducers : {
-        increase :(state)=>{
+        increase: (state)=>{
             if(state.number2 === 59){
                 state.number1 += 1
                 state.number2 -= 59
@@ -27,6 +27,9 @@ const counterSlice = createSlice({
             else{
                 state.number2 -= 1
             }
+        },
+        increseByAmount: (state, {payload})=>{
+            state= {count: state.count + payload}
         }
     }
 })
